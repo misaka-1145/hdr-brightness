@@ -1,0 +1,13 @@
+dist/
+bin/
+obj/
+.dotnet/
+.packages/
+.testappdata/
+.testsave/
+
+# 开发时的临时文件与调试截图（README 里用到的三张图不忽略）
+shot.png
+shot-demo.png
+probe-result.txt
+desktop-*.txt
