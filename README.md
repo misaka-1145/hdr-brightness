@@ -3,6 +3,25 @@
 按显示器单独调节 **Windows 显示设置里的“SDR 内容亮度”滑块**（HDR 开启时，控制 HDR 模式下 SDR 内容的亮度），
 也可以把多台显示器捆绑成一组一起调。托盘常驻、开机自启、占用很低。
 
+> 📖 **第一次使用请先看 [使用说明](docs/使用说明.md)**：从下载运行、界面导览、分组与定时规则，
+> 到常见问题和卸载，都写得比较细。
+
+## 快速开始
+
+1. 到 [Releases](https://github.com/misaka-1145/hdr-brightness/releases) 下载 `HdrBrightness.exe`，
+   放到一个固定目录（放好后别移动，否则开机自启会失效）；
+2. 双击运行，拖动卡片上的滑块即可生效；
+3. 显示器需要**已开启 HDR**，这个亮度才会影响画面。
+
+想自己编译：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\build.ps1
+```
+
+产物在 `dist\`（`HdrBrightness.exe` 主程序、`hdrbright.exe` 命令行工具），
+需要 Windows 自带的 .NET Framework 4.8，无需另外安装运行时。
+
 ## 能做什么
 
 - **单独调节**：每个显示输出一个滑块，互不影响。
@@ -109,6 +128,7 @@ powershell -ExecutionPolicy Bypass -File .\build.ps1
 ## 目录结构
 
 ```
+docs/使用说明.md            面向使用者的完整说明（推荐先看这个）
 src/Shared/                 显示配置 API 封装、设置模型、开机自启（主程序与 CLI 共用）
 src/HdrBrightness/          WinForms 托盘程序
 src/HdrBrightness.Cli/      命令行工具
